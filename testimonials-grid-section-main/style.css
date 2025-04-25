@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .card h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+  }
+  
+  .card h3 {
+    margin: 0;
+    color: hsl(0, 0%, 60%);
+    font-weight: 500;
+  }
+  
+  .card blockquote {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    line-height: 1.4;
+  }
+  
+  .card p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: hsl(0, 0%, 40%);
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+  }
+  
+  /* Unique backgrounds */
+  .card.daniel {
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 2rem;
+  }
+
+  .card.daniel > p{
+    color:white;
+  }
+
+  .card.daniel > h3{
+    color:white;
+  }
+
+  
+  .card.jonathan {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+  }
+  
+  .card.jonathan > p{
+    color:white;
+  }
+
+  .card.jonathan > h3{
+    color:white;
+  }
+
+  .card.kira {
+    background-color: white;
+    color: hsl(219, 29%, 14%);
+  }
+  
+  .card.jeanette {
+    background-color: white;
+    color: hsl(219, 29%, 14%);
+  }
+  
+  .card.patrick {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+  }
+
+  .card.patrick > p{
+    color:white;
+  }
+
+  .card.patrick > h3{
+    color:white;
+  }
+  
+  /* Responsive layout */
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+    }
+  
+    .card.daniel { grid-area: daniel; }
+    .card.jonathan { grid-area: jonathan; }
+    .card.kira { grid-area: kira; }
+    .card.jeanette { grid-area: jeanette; }
+    .card.patrick { grid-area: patrick; }
+  }
+  
